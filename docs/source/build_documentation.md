@@ -295,10 +295,10 @@ This is where you set which pages will be included in the
 ` in your browser.
 
 ### Build on Readthedocs
-Once everything looks fine locaaly, you can push everything to your gihub Project. 
+Once everything looks fine locally, you can push everything to your gihub Project. 
 
 Then check on the readthedocs build page. In our example: [https://readthedocs.org/projects/py-code-docs/builds/](https://readthedocs.org/projects/py-code-docs/builds/).
-If you had connected your github Project to your reathedocs account as explained in this tuto, a "webhook" was generated automatically so that every `push` or 'pull request` on your github project will send a notification to your readthedocs account and will trigger a new build  of your documentation. If for some reason the webhook was not generated, you can set it up manually following these [instructions](https://docs.readthedocs.io/en/stable/connected-accounts.html).
+If you had connected your github Project to your reathedocs account as explained in this tuto, a "webhook" was generated automatically so that every `push` or 'pull request` on your github project will send a notification to your readthedocs account and will trigger a new build  of your documentation. If for some reason the webhook was not generated (it might not be automatic if your project is hosted on a gihub organisation, for instance, you can set it up manually following these [instructions](https://docs.readthedocs.io/en/stable/connected-accounts.html).
 
 Your screen should look like this:
 
