@@ -19,7 +19,7 @@ autodoc_mock_imports = ['numpy']
 
 # -- Project information -----------------------------------------------------
 
-project = 'my-documented-code-test'
+project = 'py-code-docs'
 copyright = '2022, stephanie'
 author = 'stephanie'
 
