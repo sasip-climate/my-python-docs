@@ -3,20 +3,20 @@
 This  page explains how to write and publish a documentation about a python code with Reathedocs.
 You'll notice that it  is itself built using Readthedocs.
 
-If you don't wish to share your code nor its internal documentation, and you just wish to publish an "external" documentation about it, you can switch to the [simpler tuto](https://my-doc-online.readthedocs.io/en/latest/index.html) corresponding better to your case here.
+If you don't wish to share your code nor its internal documentation, and you just wish to publish an "external" documentation about it, you can switch to the [simpler tuto](https://github.com/sasip-climate/my-docs-online) corresponding better to your case here.
 
 ---
 ## 0. Starting point: your code 
 As a pre-requisite, you need:
 * to have a code ready to share (here the example is given with a dummy Python package named `dummypackage`),
-* this code is on github: [dummypackage on github](https://github.com/stephanieleroux/my-documented-code-test),
+* this code is on github: [dummypackage on github](https://github.com/sasip-climate/py-code-docs),
 * this code has been documented with nice docstrings following official guidance (here example with NumPy style docstrings). More [info and examples](https://www.sphinx-doc.org/en/master/usage/extensions/example_numpy.html) about Numpy docstrings in the previous link.
 * in your github project, you created a `/docs/` directory which will contain the documentation,
 * you have Sphinx installed locally so that you can  build your documentation locally (if not, you can install with conda: `conda install -c anaconda sphinx` ;  see more [here about Sphinx](https://www.sphinx-doc.org/en/master/)).
 
 As an example, here is the structure of the github project of  the `dummypackage` python code:
 ```
-./my-documented-code-test/
+./py-code-docs/
 ├── LICENSE
 ├── README.md
 ├── docs
@@ -53,7 +53,7 @@ At this stage, you now need to configure your documentation so that it can build
 ## 2. Set up your documentation
 
 ### 2.1 Add a .readthedoc.yaml config file 
-You need to have a `.readthedocs.yaml` config file at the root of your Project (in our dummy example, it will be located in the `/my-documented-code-test/` directory).
+You need to have a `.readthedocs.yaml` config file at the root of your Project (in our dummy example, it will be located in the `/py-code-docs/` directory).
 
 Here is the simple config file used in the example:
 
@@ -90,7 +90,7 @@ If you don't have one already, add a `requirements.txt` file at the root of your
 
 In our example we have:
 ```
-$$ my-documented-code-test>>vi requirements.txt 
+$$ py-code-docs>>vi requirements.txt 
 numpy
 sphinx>=4.4.0
 myst_parser>=0.15.2
@@ -150,7 +150,7 @@ autodoc_mock_imports = ['numpy']
 
 # -- Project information -----------------------------------------------------
 
-project = 'my-documented-code-test'
+project = 'py-code-docs'
 copyright = '2022, stephanie'
 author = 'stephanie'
 
@@ -297,7 +297,7 @@ This is where you set which pages will be included in the
 ### Build on Readthedocs
 Once everything looks fine locaaly, you can push everything to your gihub Project. 
 
-Then check on the readthedocs build page. In our example: [https://readthedocs.org/projects/my-documented-code-test/builds/](https://readthedocs.org/projects/my-documented-code-test/builds/).
+Then check on the readthedocs build page. In our example: [https://readthedocs.org/projects/py-code-docs/builds/](https://readthedocs.org/projects/py-code-docs/builds/).
 If you had connected your github Project to your reathedocs account as explained in this tuto, a "webhook" was generated automatically so that every `push` or 'pull request` on your github project will send a notification to your readthedocs account and will trigger a new build  of your documentation. If for some reason the webhook was not generated, you can set it up manually following these [instructions](https://docs.readthedocs.io/en/stable/connected-accounts.html).
 
 Your screen should look like this:
